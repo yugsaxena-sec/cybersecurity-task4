@@ -1,0 +1,11 @@
+## 🧾 Commands Summary
+
+```bash
+sudo apt install ufw -y
+sudo ufw enable
+sudo ufw status
+sudo ufw status numbered
+sudo ufw deny 23/tcp
+sudo ufw allow 22/tcp
+sudo ufw delete deny 23/tcp
+nc -zv localhost 23

@@ -1,0 +1,9 @@
+## 🧠 Understanding Firewall Traffic Filtering
+
+A firewall filters network traffic by analyzing incoming and outgoing data packets based on a set of security rules. It acts as a barrier between a trusted internal network and untrusted external networks such as the internet. Every packet that tries to enter or leave the system is inspected to determine whether it should be allowed, denied, or dropped.
+
+When a connection attempt is made, the firewall checks its rule set to see if that type of traffic is permitted. Rules are usually based on factors such as source IP address, destination IP address, port number, and protocol type (TCP/UDP/ICMP). For example, allowing port 22 enables SSH connections, while blocking port 23 prevents insecure Telnet access.
+
+Firewalls can be stateful or stateless. A stateful firewall monitors the entire connection session and makes decisions based on context, while a stateless firewall treats each packet individually without tracking session information. Stateful inspection is more secure because it understands legitimate sessions and blocks unexpected or malicious packets.
+
+In Linux, UFW provides a simplified interface to manage these firewall rules without needing to manually configure iptables. By enabling or denying specific ports, administrators can control which services are accessible to the network. This ensures that only authorized connections reach the system, effectively reducing the attack surface and protecting against unauthorized access or malicious traffic.
